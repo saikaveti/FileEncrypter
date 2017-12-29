@@ -5,7 +5,7 @@ from RC4 import *
 print("File Encryption Software:")
 print("This software essentially serves to encrypt a certain text file")
 print("The encrypted file's data will be written to a new text file")
-print("Users will have the option of picking different encryption types")
+print("Users will have the option of picking between different encryption types")
 
 #inputTextFile = input("Enter file name: ")
 inputTextFile = "TestFile.txt"
