@@ -24,14 +24,14 @@ choice = input("Enter Encryption Choice: ")
 if (choice == "1"):
     caesarInputFileObject = Caesar(inputTextFile, outputTextFile)
     caesarInputFileObject.caesar_cipher()
-    print("Caesar Cipher Complete. Verify by checking text file")
+    print("Caesar Cipher Complete. Verify by checking the output file")
 elif (choice == "2"):
     vignereKeyword = input("Enter Keyword for Vignere Cipher:  ")
     vignereObject = Vignere(inputTextFile, outputTextFile, vignereKeyword)
     vignereObject.vignere_cipher()
-    print("Vignere Cipher Complete. Verify by checking text file")
+    print("Vignere Cipher Complete. Verify by checking the output file")
 else:
-    RC4Keyword = input("Enter Keyword for Vignere Cipher:  ")
+    RC4Keyword = input("Enter Keyword for RC4 Cipher:  ")
     rc4Object = RC4(inputTextFile, outputTextFile, RC4Keyword)
     rc4Object.rc4(RC4Keyword)
-    print("Other encryption chosen")
+    print("RC4 Cipher Complete. Verify by checking the output file")

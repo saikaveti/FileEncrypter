@@ -25,10 +25,27 @@ class RC4(object):
         return s
 
     def prga(self, S):
-        
+        i = 0
+        j = 0
+        while True:
+            i = (i + 1) % 256
+            j = (j + S[i]) % 256
+            S[i], S[j] = S[j], S[i]
+            yield S[(S[i] + S[j]) % 256]
 
     def rc4(self, key):
-        s = self.generateArrayS()
+        char_cipher_array = []
         firstAlt = self.ksa(key)
-        encrypt = self.prga(firstAlt)
-        print(encrypt)
+        byteGen = self.prga(firstAlt)
+        inputObject = open(self.inputFile, "r")
+        inputText = inputObject.read()
+        for char in inputText:
+            byte = ord(char)
+            cipher_byte = byte ^ next(byteGen)
+            char_cipher_array.append(str(cipher_byte))
+        output = ''.join(char_cipher_array)
+        charArray = list(output)
+        outputFileObject = open(self.outputFile, "w")
+        for char in charArray:
+            outputFileObject.write(char)
+        outputFileObject.write("\nVignere Cipher Implemented")
