@@ -48,4 +48,4 @@ class RC4(object):
         outputFileObject = open(self.outputFile, "w")
         for char in charArray:
             outputFileObject.write(char)
-        outputFileObject.write("\nVignere Cipher Implemented")
+        outputFileObject.write("\nRC4 Cipher Implemented")

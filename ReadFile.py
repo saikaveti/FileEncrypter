@@ -9,10 +9,10 @@ print("The encrypted file's data will be written to a new text file")
 print("Users will have the option of picking between different encryption types")
 
 #inputTextFile = input("Enter file name: ")
-inputTextFile = "TestFile.txt"
+inputTextFile = "SmallInput.txt"
 
 #outputTextFile = input("Enter the file you want to write the encryption to:")
-outputTextFile = "SmallInput.txt"
+outputTextFile = "OutputFile.txt"
 
 print("These are the algorithms currently implemented:")
 print("Enter the number of the algorithm you want:")
@@ -37,5 +37,8 @@ elif (choice == "3"):
     rc4Object = RC4(inputTextFile, outputTextFile, RC4Keyword)
     rc4Object.rc4(RC4Keyword)
     print("RC4 Cipher Complete. Verify by checking the output file")
-elif (choice = "4"):
+elif (choice == "4"):
+    elGamObj = ElGamal(inputTextFile, outputTextFile)
+    elGamObj.ElGamal()
+    print("El Gamal Encryption Complete. Verify by checking the output file")
 

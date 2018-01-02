@@ -1,4 +1,3 @@
-import numpy as np
 import random as rand
 
 class ElGamal(object):
@@ -10,7 +9,7 @@ class ElGamal(object):
     def bob_public_key(self):
 
         # Input P Value
-        P = int(input("Enter Value of G: "))
+        P = int(input("Enter Value of P: "))
         # Generate G Value
         G = rand.randint(1, P)
         # Generate X Value
@@ -49,6 +48,13 @@ class ElGamal(object):
 
         return a_and_b
 
-    def bob_decryption(self):
-
-        
+    def ElGamal(self):
+        inputFileObject = open(self.inputFile)
+        inputFileText = inputFileObject.read()
+        message = int(inputFileText)
+        publicKey = self.bob_public_key()
+        a_and_b = self.alice_encryption(message, publicKey)
+        outputFileObject = open(self.outputFile, "w")
+        output_str = "A: " + str(a_and_b[0]) + ". B: " + str(a_and_b[1]) + "."
+        outputFileObject.write(output_str)
+        outputFileObject.write("\nEl Gamal Implemented")
