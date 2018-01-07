@@ -1,4 +1,4 @@
-This is the test file
-I really like to watch baseball
-I hope to make this program really good
+HI is the test file
+I like to watch baseball
+I hope to make this program good
 Now I will end the test file

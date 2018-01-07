@@ -2,6 +2,7 @@ from CaesarCipher import *
 from VignereCipher import *
 from RC4 import *
 from ElGamal import *
+from RSA import *
 
 print("File Encryption Software:")
 print("This software essentially serves to encrypt a certain text file")
@@ -9,7 +10,7 @@ print("The encrypted file's data will be written to a new text file")
 print("Users will have the option of picking between different encryption types")
 
 #inputTextFile = input("Enter file name: ")
-inputTextFile = "SmallInput.txt"
+inputTextFile = "TestFile.txt"
 
 #outputTextFile = input("Enter the file you want to write the encryption to:")
 outputTextFile = "OutputFile.txt"
@@ -20,6 +21,7 @@ print("1 - Caesar Cipher")
 print("2 - Vignere Cipher")
 print("3 - RC4 Cipher (Stream Cipher)")
 print("4 - ElGamal Encryption")
+print("5 - RSA Encryption")
 
 choice = input("Enter Encryption Choice: ")
 
@@ -41,4 +43,7 @@ elif (choice == "4"):
     elGamObj = ElGamal(inputTextFile, outputTextFile)
     elGamObj.ElGamal()
     print("El Gamal Encryption Complete. Verify by checking the output file")
-
+elif (choice == "5"):
+    rsaObj = RSA(inputTextFile, outputTextFile)
+    rsaObj.rsa()
+    print("RSA Encryption Complete. Verify by checking the output file")
