@@ -9,11 +9,9 @@ print("This software essentially serves to encrypt a certain text file")
 print("The encrypted file's data will be written to a new text file")
 print("Users will have the option of picking between different encryption types")
 
-#inputTextFile = input("Enter file name: ")
-inputTextFile = "TestFile.txt"
+inputTextFile = input("Enter file name: ")
 
-#outputTextFile = input("Enter the file you want to write the encryption to:")
-outputTextFile = "OutputFile.txt"
+outputTextFile = input("Enter the file you want to write the encryption to:")
 
 print("These are the algorithms currently implemented:")
 print("Enter the number of the algorithm you want:")
